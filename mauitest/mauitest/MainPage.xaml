@@ -3,39 +3,192 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mauitest.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid
+        Padding="5.0"
+        BackgroundColor="Gray"
+        ColumnSpacing="1"
+        RowSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+        <Label
+            x:Name="result"
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            BackgroundColor="White"
+            FontAttributes="Bold"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Text="0"
+            TextColor="Orange"
+            VerticalTextAlignment="Center"/>
+        <Button
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGray"
+            CornerRadius="0"
+            Clicked="OnClear"
+            FontSize="36"
+            Text="C"/>
+        <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            BackgroundColor="LightGray"
+            CornerRadius="0"
+            Clicked="OnSquareRoot"
+            FontSize="36"
+            Text="X2"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="7"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="8"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="9"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="4"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="5"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="6"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="1"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="2"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="3"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            BackgroundColor="Purple"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="*"
+            TextColor="White"/>
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            BackgroundColor="Purple"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="-"
+            TextColor="White"/>
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Purple"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="+"
+            TextColor="White"/>
+        <Button
+            Grid.Row="1"
+            Grid.Column="3"
+            BackgroundColor="Purple"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="/"
+            TextColor="White"/>
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="0"
+            TextColor="DarkBlue"/>
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            BackgroundColor="Purple"
+            CornerRadius="0"
+            FontSize="36"
+            Clicked="OnNumberSelected"
+            Text="="
+            TextColor="White"/>
+        
+        
+    </Grid>
 
 </ContentPage>
